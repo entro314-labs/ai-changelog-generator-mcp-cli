@@ -9,7 +9,7 @@
   <a href="https://www.npmjs.com/package/ai-github-changelog-generator-cli-mcp">
     <img src="https://img.shields.io/npm/v/ai-github-changelog-generator-cli-mcp.svg" alt="npm version">
   </a>
-  <a href="https://github.com/idominikosgr/AI-github-changelog-generator-cli-mcp/blob/main/LICENSE">
+  <a href="https://github.com/entro314-labs/AI-github-changelog-generator-cli-mcp/blob/main/LICENSE">
     <img src="https://img.shields.io/npm/l/ai-github-changelog-generator-cli-mcp.svg" alt="license">
   </a>
   <a href="https://nodejs.org/">
@@ -215,7 +215,7 @@ ai-changelog --enterprise --since v1.0.0 --no-attribution
 ```
 
 **About Attribution:**
-- By default, changelogs include a small footer: "Generated using [ai-github-changelog-generator-cli-mcp](https://github.com/idominikosgr/AI-github-changelog-generator-cli-mcp)"
+- By default, changelogs include a small footer: "Generated using [ai-github-changelog-generator-cli-mcp](https://github.com/entro314-labs/AI-github-changelog-generator-cli-mcp)"
 - Use `--no-attribution` flag for clean output without promotional footer
 - For MCP server, set `"includeAttribution": false` in tool parameters
 
@@ -651,7 +651,7 @@ This tool succeeds because it solves real problems simply:
 - **No configuration complexity** - Intelligent defaults, minimal setup  
 
 ```sh
-git clone https://github.com/idominikosgr/AI-github-changelog-generator-cli-mcp
+git clone https://github.com/entro314-labs/AI-github-changelog-generator-cli-mcp
 cd AI-github-changelog-generator-cli-mcp
 npm install
 npm test

@@ -160,7 +160,7 @@ This release significantly improves the tool's reliability and usefulness by:
 
 ### Added
 - **Attribution Footer**: Added optional attribution footer to generated changelogs
-  - Displays link to the project: "Generated using [ai-github-changelog-generator-cli-mcp](https://github.com/idominikosgr/AI-github-changelog-generator-cli-mcp)"
+  - Displays link to the project: "Generated using [ai-github-changelog-generator-cli-mcp](https://github.com/entro314-labs/AI-github-changelog-generator-cli-mcp)"
   - Enabled by default for promotional purposes while respecting user preferences
   - CLI flag `--no-attribution` to disable attribution footer
   - MCP parameter `includeAttribution: false` to disable attribution in MCP server
@@ -271,7 +271,7 @@ This release significantly improves the tool's reliability and usefulness by:
   - GPT-4.1 series support with 1M token context
   - Prompt caching for 75% cost reduction
   - Enhanced error handling and fallback mechanisms
-- **Package Namespace**: Scoped to `@idominikosgr/ai-changelog-generator`
+- **Package Namespace**: Scoped to `@entro314-labs/ai-changelog-generator`
 - **Import Resolution**: Relative paths for improved portability
 
 ### Fixed
