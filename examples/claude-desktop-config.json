@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "ai-changelog-generator": {
+      "command": "ai-changelog-mcp",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}

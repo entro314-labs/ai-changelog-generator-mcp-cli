@@ -1,0 +1,124 @@
+{
+  "name": "ai-github-changelog-generator-cli-mcp",
+  "version": "2.5.1",
+  "description": "AI-powered changelog generator with MCP server support - works with OpenAI GPT-4.1 and Azure OpenAI with reasoning models",
+  "main": "lib/ai-changelog-generator.js",
+  "types": "types/index.d.ts",
+  "bin": {
+    "ai-changelog": "./bin/ai-changelog.js",
+    "ai-changelog-mcp": "./bin/ai-changelog-mcp.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "examples/",
+    "types/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "start": "node bin/ai-changelog.js",
+    "changelog": "node bin/ai-changelog.js",
+    "changelog:detailed": "node bin/ai-changelog.js --detailed",
+    "changelog:enterprise": "node bin/ai-changelog.js --enterprise",
+    "changelog:interactive": "node bin/ai-changelog.js --interactive",
+    "changelog:analyze": "node bin/ai-changelog.js --analyze",
+    "changelog:preview": "node bin/ai-changelog.js --dry-run",
+    "changelog:no-color": "node bin/ai-changelog.js --no-color",
+    "mcp": "node bin/ai-changelog-mcp.js",
+    "mcp:start": "node bin/ai-changelog-mcp.js",
+    "demo": "node examples/demo-interactive-changelog.js",
+    "test": "node test-mcp-tools.js",
+    "test:models": "node test-model-selection.js",
+    "test:enhanced": "node test-enhanced-features.js",
+    "test:new-features": "node test/test-new-features.js",
+    "test:mcp": "node test-mcp-server.js",
+    "test:git": "node lib/git-manager.js info",
+    "validate:mcp": "node validate-mcp.js",
+    "setup": "node scripts/setup-azure-openai.js",
+    "config:create": "node lib/config.js create-sample",
+    "config:validate": "node lib/config.js validate",
+    "config:test-models": "node lib/config.js model-test",
+    "providers:test": "node test-ai-provider.js",
+    "providers:validate": "node test-enhanced-features.js",
+    "git:info": "node lib/git-manager.js info",
+    "git:commits": "node lib/git-manager.js commits 10",
+    "git:stats": "node lib/git-manager.js stats 5",
+    "prepublishOnly": "npm run validate:mcp && npm run test",
+    "postinstall": "node -e \"console.log('\\n🎉 AI Changelog Generator installed!\\n\\n⚡ Quick Start:\\n  ai-changelog                 - Generate changelog\\n  ai-changelog --detailed      - Detailed analysis\\n  ai-changelog --interactive   - Interactive mode\\n  ai-changelog-mcp            - Start MCP server\\n\\n🤖 AI Models Supported:\\n  • GPT-4.1 series (1M context, 75% cost reduction)\\n  • o3/o4 reasoning models (Azure-only)\\n  • Automatic model selection\\n\\n📖 Docs: https://github.com/idominikosgr/AI-github-changelog-generator-cli-mcp\\n\\n© All trademarks belong to their respective owners.\\n')\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.1",
+    "chalk": "^5.4.1",
+    "dotenv": "^17.2.0",
+    "inquirer": "^12.7.0",
+    "openai": "^5.9.0",
+    "yargs": "^18.0.0",
+    "@anthropic-ai/sdk": "^0.56.0",
+    "@google/genai": "^1.9.0",
+    "@huggingface/inference": "^2.8.0",
+    "@huggingface/hub": "^0.15.1",
+    "ollama": "^0.5.0",
+    "@lmstudio/sdk": "^1.0.0",
+    "@azure/identity": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.13"
+  },
+  "keywords": [
+    "changelog",
+    "git",
+    "ai",
+    "automation",
+    "openai",
+    "azure",
+    "gpt-4.1",
+    "reasoning-models",
+    "o3",
+    "o3-mini",
+    "o4",
+    "o4-mini",
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "cli",
+    "commit-analysis",
+    "semantic-versioning",
+    "release-notes",
+    "devops",
+    "ci-cd"
+  ],
+  "author": {
+    "name": "idominikosgr",
+    "url": "https://github.com/idominikosgr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idominikosgr/AI-github-changelog-generator-cli-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/idominikosgr/AI-github-changelog-generator-cli-mcp/issues"
+  },
+  "homepage": "https://github.com/idominikosgr/AI-github-changelog-generator-cli-mcp#readme",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "peerDependencies": {
+    "git": "*"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/idominikosgr"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "volta": {
+    "node": "22.15.30",
+    "npm": "11.4.1"
+  }
+}
